@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { frontendEnv } from '../../../environments/frontendEnv';
+import { frontendEnv } from './frontendEnv';
 
 export async function getHello() {
     try {
-        const res = await axios.get(frontendEnv.functionsUrl + '/sample' + '/hello');
+        const res = await axios.get(frontendEnv.functionsBaseUrl + '/sample' + '/hello');
         return res.data;
     }
     catch (error) {
